@@ -146,6 +146,8 @@ const ReviewGrid = () => {
                />
             </>
          ) : null}
+         <div className="pointer-ev absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-slate-100" />
+         <div className="pointer-ev absolute inset-x-0 bottom-0 h-32 bg-gradient-to-b from-slate-100" />
       </div>
    );
 };
