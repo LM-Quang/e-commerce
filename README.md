@@ -32,3 +32,28 @@ npm install framer-motion
 ```bash
 npm install @radix-ui/react-slot
 ```
+
+6. `React Dropzone`
+
+```bash
+npm i react-dropzone
+```
+
+7. `Kinde`, built-in authentication, access control for Next JS (`Optional`)
+
+```bash
+npm i @kinde-oss/kinde-auth-nextjs
+```
+
+8. [uploadthing](uploadthing.com) for Storing file
+
+```bash
+npm i uploadthing
+npm i @uploadthing/react
+```
+
+9. `Zod`
+
+```bash
+npm i zod
+```
