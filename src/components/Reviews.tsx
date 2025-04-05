@@ -101,7 +101,7 @@ const Review = ({ imgSrc, className, ...props }: ReviewProps) => {
          }}
          {...props}
       >
-         <Phone imgSrc={imgSrc} />
+         <Phone imgSrc={imgSrc.src} />
       </div>
    );
 };

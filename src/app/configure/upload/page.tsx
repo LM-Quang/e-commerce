@@ -22,7 +22,8 @@ const FileUploadPage = () => {
 
    // This is for demo Waiting time when uploading and redirect to /configure/design?id=...
    const [isUploading, setIsUploading] = useState<boolean>(false);
-   const startUpload = (acceptedFiles: File[]) => {
+   // Upload file to Storage: S3, cloudfare,...
+   const startUpload = (acceptedFiles: File[], id: string) => {
       setIsUploading(true);
       for (let i = 1; i <= 10; i++) {
          setTimeout(() => {
@@ -32,14 +33,15 @@ const FileUploadPage = () => {
       setTimeout(() => {
          setIsUploading(false);
          startTransition(() => {
-            router.push("/configure/design?id=123");
+            router.push(`/configure/design?id=${id}`);
          });
       }, 11000);
       console.log(acceptedFiles);
+      console.log(id);
    };
 
    const onDropAccepted = (acceptedFiles: File[]) => {
-      startUpload(acceptedFiles);
+      startUpload(acceptedFiles, "123");
       setIsDragOver(false);
    };
 

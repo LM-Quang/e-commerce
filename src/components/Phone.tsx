@@ -5,7 +5,7 @@ import phoneTemplateDarkEdges from "../../public/phone-template-dark-edges.png";
 import phoneTemplateWhiteEdges from "../../public/phone-template-white-edges.png";
 
 interface PhoneProps extends HTMLAttributes<HTMLDivElement> {
-   imgSrc: StaticImageData;
+   imgSrc: string | StaticImageData;
    dark?: boolean;
 }
 

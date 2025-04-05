@@ -48,7 +48,7 @@ const ImageUpload = () => {
                      />
                   </div>
 
-                  <Phone className="w-60" imgSrc={horse} />
+                  <Phone className="w-60" imgSrc={horse.src} />
                </div>
             </div>
 

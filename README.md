@@ -45,3 +45,27 @@ npm i react-dropzone
 npm i @prisma/client
 npm i prisma
 ```
+
+7. `Rnd` for Draggable and resizeable React component
+
+```bash
+npm i react-rnd
+```
+
+8. `Headless UI`
+
+```bash
+npm i @headlessui/react
+```
+
+9. `Tansack React Query`
+
+```bash
+npm i @tanstack/react-query
+```
+
+910 `React Dom Confetti`
+
+```bash
+npm i react-dom-confetti
+```
