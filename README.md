@@ -39,21 +39,9 @@ npm install @radix-ui/react-slot
 npm i react-dropzone
 ```
 
-7. `Kinde`, built-in authentication, access control for Next JS (`Optional`)
+7. `Prisma`
 
 ```bash
-npm i @kinde-oss/kinde-auth-nextjs
-```
-
-8. [uploadthing](uploadthing.com) for Storing file
-
-```bash
-npm i uploadthing
-npm i @uploadthing/react
-```
-
-9. `Zod`
-
-```bash
-npm i zod
+npm i @prisma/client
+npm i prisma
 ```

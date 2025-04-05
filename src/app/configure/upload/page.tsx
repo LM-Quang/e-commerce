@@ -1,7 +1,6 @@
 "use client";
 
 import { Progress } from "@/components/ui/progress";
-import { useUploadThing } from "@/lib/uploadthing";
 import { cn } from "@/lib/utils";
 import { Image, Loader2, MousePointerSquareDashed } from "lucide-react";
 import { useRouter } from "next/navigation";
@@ -15,26 +14,32 @@ const FileUploadPage = () => {
    const [isPending, startTransition] = useTransition();
    const router = useRouter();
 
-   const { startUpload, isUploading } = useUploadThing("imageUploader", {
-      onClientUploadComplete: ([data]) => {
-         const configId = data.serverData.configId;
-         startTransition(() => {
-            router.push(`/configure/design?id=${configId}`);
-         });
-      },
-      onUploadProgress(p) {
-         setUploadProgress(p);
-      },
-   });
-
    const onDropRejected = (rejectedFiles: FileRejection[]) => {
       const [file] = rejectedFiles;
       setIsDragOver(false);
       toast.error(`${file.file.type} type is not supported.`);
    };
 
+   // This is for demo Waiting time when uploading and redirect to /configure/design?id=...
+   const [isUploading, setIsUploading] = useState<boolean>(false);
+   const startUpload = (acceptedFiles: File[]) => {
+      setIsUploading(true);
+      for (let i = 1; i <= 10; i++) {
+         setTimeout(() => {
+            setUploadProgress(i * 10);
+         }, i * 1000);
+      }
+      setTimeout(() => {
+         setIsUploading(false);
+         startTransition(() => {
+            router.push("/configure/design?id=123");
+         });
+      }, 11000);
+      console.log(acceptedFiles);
+   };
+
    const onDropAccepted = (acceptedFiles: File[]) => {
-      startUpload(acceptedFiles, { configId: undefined });
+      startUpload(acceptedFiles);
       setIsDragOver(false);
    };
 
