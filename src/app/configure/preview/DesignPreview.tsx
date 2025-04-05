@@ -15,7 +15,6 @@ import { useRouter } from "next/navigation";
 // import LoginModal from "@/components/LoginModal";
 import { toast } from "sonner";
 import { getUser } from "@/app/api/auth/route";
-import horse from "../../../../public/horse.jpg";
 
 const DesignPreview = ({ configuration }: { configuration: Configuration }) => {
    const router = useRouter();
@@ -73,8 +72,7 @@ const DesignPreview = ({ configuration }: { configuration: Configuration }) => {
             <div className="md:col-span-4 lg:col-span-3 md:row-span-2 md:row-end-2">
                <Phone
                   className={cn(`bg-${tw}`, "max-w-[150px] md:max-w-full")}
-                  imgSrc={horse}
-                  // imgSrc={configuration.croppedImageUrl!}
+                  imgSrc={configuration.croppedImageUrl!}
                />
             </div>
 

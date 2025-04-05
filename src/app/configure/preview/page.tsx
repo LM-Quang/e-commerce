@@ -1,17 +1,16 @@
 import db from "@/db";
 import { notFound } from "next/navigation";
 import DesignPreview from "./DesignPreview";
-// import { createSearchParams } from 'next/navigation';
 
-// interface PageProps {
-//    searchParams: {
-//       [key: string]: string | string[] | undefined;
-//    };
-// }
-
-const Page = async ({ searchParams }: { searchParams: URLSearchParams }) => {
+interface PageProps {
+   searchParams: {
+      [key: string]: string | string[] | undefined;
+   };
+}
+// { searchParams }: PageProps
+const Page = async ({ searchParams }: PageProps) => {
    // const { id } = searchParams;
-   const id = searchParams.get("id");
+   const { id } = await searchParams;
    if (!id || typeof id !== "string") {
       return notFound();
    }

@@ -1,4 +1,3 @@
-// import { User } from "lucide-react";
 export interface User {
    id: string;
    username: string;
@@ -6,6 +5,6 @@ export interface User {
 }
 
 export const getUser = () => {
-   const user: User = { id: "abc", username: "User", email: "ab@gmail.com" };
+   const user: User = { id: "1", username: "User", email: "ab@gmail.com" };
    return user;
 };
