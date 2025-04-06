@@ -3,7 +3,7 @@ import Image, { StaticImageData } from "next/image";
 import React, { HTMLAttributes } from "react";
 import phoneTemplateDarkEdges from "../../public/phone-template-dark-edges.png";
 import phoneTemplateWhiteEdges from "../../public/phone-template-white-edges.png";
-
+import horse from "../../public/horse.jpg";
 interface PhoneProps extends HTMLAttributes<HTMLDivElement> {
    imgSrc: string | StaticImageData;
    dark?: boolean;
@@ -26,7 +26,7 @@ const Phone = ({ imgSrc, className, dark = false, ...props }: PhoneProps) => {
          <div className="absolute -z-10 inset-0">
             <Image
                className="object-cover"
-               src={imgSrc}
+               src={horse != null ? horse : imgSrc}
                alt="overlaying phone image"
                width={256}
                height={256}
