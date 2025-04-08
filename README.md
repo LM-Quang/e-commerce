@@ -1,4 +1,6 @@
-## E-Commerce App
+## Learing project
+
+[E-Commerce App](https://www.youtube.com/watch?v=SG82Aqcaaa0)
 
 # Dependency
 
@@ -64,8 +66,20 @@ npm i @headlessui/react
 npm i @tanstack/react-query
 ```
 
-910 `React Dom Confetti`
+10 `React Dom Confetti`
 
 ```bash
 npm i react-dom-confetti
+```
+
+11 `React Email Components`
+
+```bash
+npm i @react-email/components
+```
+
+12 `Resend`
+
+```bash
+npm i resend
 ```
