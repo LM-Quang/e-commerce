@@ -1,5 +1,6 @@
 ## Learing project
 
+Learning this Project from [Josh tried coding](https://www.youtube.com/@joshtriedcoding)
 [E-Commerce App](https://www.youtube.com/watch?v=SG82Aqcaaa0)
 
 # Dependency
